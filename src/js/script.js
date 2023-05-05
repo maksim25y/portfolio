@@ -16,14 +16,15 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 })
 
+const smoothLinks = document.querySelectorAll("a[href^='#']");
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute("href");
 
-  $(document).ready(function(){
-  $("a[href*='#']").on("click", function(e){
-    var anchor = $(this);
-    $('html, body').stop().animate({
-      scrollTop: $(anchor.attr('href')).offset().top
-    }, 2777);
-    e.preventDefault();
-    return false;
-  });
-});
+        document.querySelector(id).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+};
