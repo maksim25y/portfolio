@@ -1,3 +1,16 @@
+const smoothLinks = document.querySelectorAll("a[href^='#']");
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute("href");
+
+        document.querySelector(id).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+};
+
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.nav-menu'),
     menuItem = document.querySelectorAll('.nav-menu__list-item'),
@@ -15,16 +28,3 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 })
-
-const smoothLinks = document.querySelectorAll("a[href^='#']");
-for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        const id = smoothLink.getAttribute("href");
-
-        document.querySelector(id).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
-};
