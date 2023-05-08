@@ -394,6 +394,10 @@ table {
   box-sizing: border-box;
 }
 
+img {
+  aspect-ratio: attr(width)/attr(height);
+}
+
 @font-face {
   font-family: 'MontseratT';
   src: url("../fonts/Montserrat-Regular.ttf");
@@ -431,7 +435,6 @@ body {
 .main-section {
   position: relative;
   padding-top: 16px;
-  min-height: 800px;
   background: #F0F0F0;
   overflow: hidden;
 }
@@ -667,7 +670,7 @@ body {
 }
 
 .second-section {
-  min-height: 700px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -768,7 +771,7 @@ body {
 
 .third-section {
   position: relative;
-  min-height: 640px;
+  padding-bottom: 120px;
   background: #f0f0f0;
   z-index: 0;
   overflow: hidden;
@@ -826,7 +829,6 @@ body {
 }
 
 .footer__container {
-  min-height: 272px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -839,9 +841,6 @@ body {
 @media (max-width: 1199px) {
   .container {
     width: 960px;
-  }
-  .main-section {
-    min-height: 690px;
   }
   .main-section__first-elipse {
     right: 10px;
@@ -866,9 +865,6 @@ body {
   }
   .right-wrapper {
     right: 20px;
-  }
-  .second-section {
-    min-height: 600px;
   }
   .second-section__cards-box {
     display: flex;
@@ -900,9 +896,6 @@ body {
 @media (max-width: 991px) {
   .container {
     width: 720px;
-  }
-  .main-section {
-    min-height: 535px;
   }
   .main-section__first-elipse {
     width: 160px;
@@ -957,9 +950,6 @@ body {
     margin-right: 11px;
     width: 161px;
   }
-  .second-section {
-    min-height: 447px;
-  }
   .second-section__title {
     margin-bottom: 20px;
   }
@@ -1002,7 +992,7 @@ body {
     height: 90px;
   }
   .third-section {
-    min-height: 500px;
+    padding-bottom: 50px;
   }
   .third-section__title {
     font-size: 50px;
@@ -1048,9 +1038,6 @@ body {
   }
   .third-section__right-title {
     margin-bottom: 10px;
-  }
-  .footer__container {
-    min-height: 206px;
   }
   .footer__title {
     font-size: 50px;
@@ -1119,11 +1106,9 @@ body {
   .nav-menu_active {
     right: 0px;
   }
-  .main-section {
-    min-height: 370px;
-  }
   .main-section__nav-container {
     justify-content: center;
+    margin-bottom: 20px;
   }
   .main-section__first-elipse {
     width: 160px;
@@ -1178,7 +1163,7 @@ body {
     background-color: #4d4d4d;
   }
   .second-section {
-    min-height: 480px;
+    margin-bottom: 25px;
   }
   .second-section__second-elipse {
     display: none;
@@ -1208,7 +1193,7 @@ body {
     margin-bottom: 10px;
   }
   .third-section {
-    min-height: 412px;
+    padding-bottom: 70px;
   }
   .third-section__title {
     display: none;
@@ -1226,8 +1211,8 @@ body {
     top: 78px;
     left: 126px;
   }
-  .footer__container {
-    min-height: 171px;
+  .third-section .right-wrapper__icon-btn {
+    display: none;
   }
   .footer__title {
     font-size: 35px;
@@ -1260,7 +1245,7 @@ body {
     right: -58px;
   }
   .main-section {
-    min-height: 400px;
+    min-height: 350px;
   }
   .main-section__first-elipse {
     width: 160px;
@@ -1275,7 +1260,7 @@ body {
     margin-bottom: 10px;
   }
   .second-section {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
   .second-section__cards-box {
     display: flex;
@@ -1295,9 +1280,11 @@ body {
   }
   .cards-item {
     height: 230px;
-    width: 230px;
+    width: 100%;
     margin-bottom: 20px;
     margin-right: 0;
+    display: inline-flex;
+    justify-content: center;
   }
   .cards-item:last-child {
     margin-bottom: 0px;
@@ -1308,10 +1295,10 @@ body {
   .cards-item__text {
     font-size: 25px;
     top: 80px;
-    left: 34px;
+    left: 45%;
   }
   .third-section {
-    min-height: 564px;
+    padding-bottom: 20px;
   }
   .third-section__second-elipse {
     display: none;
@@ -1328,12 +1315,16 @@ body {
   .third-section__main-btn {
     margin-bottom: 10px;
   }
+  .right-wrapper__button {
+    display: flex;
+    justify-content: center;
+  }
   .subtract-third-big {
     width: 150px;
     height: 150px;
   }
-  .right-wrapper__button {
-    flex-direction: column;
+  .footer {
+    padding: 20px 0px;
   }
   .footer__container {
     justify-content: center;
