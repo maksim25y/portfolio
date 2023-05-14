@@ -1238,6 +1238,9 @@ body {
   .left-wrapper__rectangle-blue {
     display: none;
   }
+  .buttons__icon-btn {
+    display: none;
+  }
   .right-wrapper {
     top: 6px;
     z-index: 10;
