@@ -821,6 +821,10 @@ body {
   bottom: 75px;
 }
 
+.footer {
+  padding-bottom: 20px;
+}
+
 .footer__img {
   position: absolute;
   left: -240px;
@@ -1433,3 +1437,4 @@ body {
 .hidden {
   display: none;
 }
+
